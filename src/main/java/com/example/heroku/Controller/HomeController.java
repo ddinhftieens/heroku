@@ -1,17 +1,20 @@
 package com.example.heroku.Controller;
 
+import com.example.heroku.Service.HomeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
-@RequestMapping("/address")
+@RequestMapping("/home")
 public class HomeController {
-    @GetMapping("/getListAddress")
-    public String getHome(){
-        return "address";
+    @Autowired
+    private HomeService homeService;
+    @GetMapping("/getHome")
+    public List getHome(){
+        return homeService.getHome();
     }
 }
