@@ -17,4 +17,8 @@ public class HomeController {
     public List getHome(){
         return homeService.getHome();
     }
+    @GetMapping("/")
+    public String getDefault(){
+        return "home";
+    }
 }
