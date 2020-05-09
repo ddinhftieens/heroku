@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/home")
+//@RequestMapping("/home")
 public class HomeController {
     @Autowired
     private HomeService homeService;
-    @GetMapping("/getHome")
+    @GetMapping("/gethome")
     public List getHome(){
         return homeService.getHome();
     }
