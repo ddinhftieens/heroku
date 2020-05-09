@@ -12,6 +12,6 @@ import java.util.Map;
 public class HomeController {
     @GetMapping("/getListAddress")
     public String getHome(){
-        return "https://vnexpress.net/";
+        return "address";
     }
 }
